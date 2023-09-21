@@ -39,6 +39,20 @@ public class Cliente implements Persistente {
     
 	@ColunaTabela(dbName = "estado", setJavaName = "setEstado")
     private String estado;
+
+	@ColunaTabela(dbName = "cep", setJavaName = "setCep")
+	private Long cep;
+
+	public Long getCep() {
+		return cep;
+	}
+
+	public void setCep(Long cep) {
+		this.cep = cep;
+	}
+
+	// Tarefa MOD 30
+
     
 	public String getNome() {
 		return nome;
