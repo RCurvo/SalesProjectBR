@@ -10,7 +10,6 @@ import static org.junit.Assert.assertTrue;
 import java.math.BigDecimal;
 import java.util.Collection;
 
-import org.hamcrest.core.IsCollectionContaining;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Test;
@@ -53,6 +52,7 @@ public class ProdutoDAOTest {
 		produto.setCodigo(codigo);
 		produto.setDescricao("Produto 1");
 		produto.setNome("Produto 1");
+		produto.setCategoria("Eletrodoméstico");
 		produto.setValor(BigDecimal.TEN);
 		produtoDao.cadastrar(produto);
 		return produto;

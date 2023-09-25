@@ -78,9 +78,9 @@ public class ClienteDAO extends GenericDAO<Cliente, Long> implements IClienteDAO
 		sb.append("ENDERECO = ?,");
 		sb.append("NUMERO = ?,");
 		sb.append("CIDADE = ?,");
-		sb.append("ESTADO = ?");
+		sb.append("ESTADO = ?,");
+		sb.append("CEP = ?");
 		sb.append(" WHERE CPF = ?");
-		sb.append(" WHERE CEP = ?");
 		return sb.toString();
 	}
 
@@ -92,8 +92,8 @@ public class ClienteDAO extends GenericDAO<Cliente, Long> implements IClienteDAO
 		stmUpdate.setLong(4, entity.getNumero());
 		stmUpdate.setString(5, entity.getCidade());
 		stmUpdate.setString(6, entity.getEstado());
-		stmUpdate.setLong(7, entity.getCpf());
-		stmUpdate.setLong(8, entity.getCep());
+		stmUpdate.setLong(7, entity.getCep());
+		stmUpdate.setLong(8, entity.getCpf());
 	}
 
 	@Override
